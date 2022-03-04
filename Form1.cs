@@ -32,42 +32,60 @@ namespace MemeMakerApp
 
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void lblbottombox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Method that will responsible for top text of image
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void changetoptext(object sender, EventArgs e)
+        {
+
+        }
+        /// <summary>
+        /// Method that is responsible for bottom text of image
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void changebottomtext(object sender, EventArgs e)
+        {
+
+        }
+        /// <summary>
+        /// Method is resposible to deal what happens when user click on open button
+        /// in window form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void openimage(object sender, EventArgs e)
+        {
+
+        }
+        /// <summary>
+        /// Method that is responsible to deal what happens when user entered on 
+        /// save button in window form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void saveimage(object sender, EventArgs e)
+        {
+
+        }
+        /// <summary>
+        /// Method is responsible to deal situations when user wants to change text color
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void changetextcolor(object sender, EventArgs e)
         {
 
         }
