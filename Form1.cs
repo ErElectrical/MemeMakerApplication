@@ -86,6 +86,21 @@ namespace MemeMakerApp
         /// <param name="e"></param>
         private void openimage(object sender, EventArgs e)
         {
+            openImageFile = new OpenFileDialog();
+            openImageFile.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+            openImageFile.Filter = "Image Files Only (*.jpg,*.gif,*.png,*.bmp) | *.jpg;*.gif;*.png;*.bmp";
+
+            if(openImageFile.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    imgpreview.Image = Image.FromFile(openImageFile.FileName);
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Error!, could not loud the file " + ex.Message);
+                }
+            }
 
         }
         /// <summary>
@@ -104,6 +119,13 @@ namespace MemeMakerApp
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void changetextcolor(object sender, EventArgs e)
+        {
+            Button tempbutton = sender as Button;
+            lbltoptext.ForeColor = tempbutton.ForeColor;
+            lblbottomtext.ForeColor = tempbutton.ForeColor;
+        }
+
+        private void MemeMaker_Load(object sender, EventArgs e)
         {
 
         }
