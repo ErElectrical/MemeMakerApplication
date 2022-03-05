@@ -105,6 +105,13 @@ namespace MemeMakerApp
         /// <param name="e"></param>
         private void changetextcolor(object sender, EventArgs e)
         {
+            Button tempbutton = sender as Button;
+            lbltoptext.ForeColor = tempbutton.ForeColor;
+            lblbottomtext.ForeColor = tempbutton.ForeColor;
+        }
+
+        private void MemeMaker_Load(object sender, EventArgs e)
+        {
 
         }
     }
