@@ -7,14 +7,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Imaging; // this one is for deal with jpg image file
 
 namespace MemeMakerApp
 {
+   
     public partial class MemeMaker : Form
     {
+
+        OpenFileDialog openImageFile;
         public MemeMaker()
         {
             InitializeComponent();
+            SetUpApp();
+        }
+
+        /// <summary>
+        /// Method set both top and bottom text as a child of picture box
+        /// </summary>
+        private void SetUpApp()
+        {
+            //Adding both lbl text to the controls of picture box
+            imgpreview.Controls.Add(lbltoptext);
+            imgpreview.Controls.Add(lblbottomtext);
+            //setting up the location of both lbl text
+            lbltoptext.Location = new Point(0, 0);
+            lblbottomtext.Location = new Point(0,12);
+
+            //send it to back so that lbl text rises above the image
+            imgpreview.SendToBack();
+
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -37,11 +59,6 @@ namespace MemeMakerApp
 
         }
 
-        private void lblbottombox_Click(object sender, EventArgs e)
-        {
-
-        }
-
         /// <summary>
         /// Method that will responsible for top text of image
         /// </summary>
@@ -49,6 +66,7 @@ namespace MemeMakerApp
         /// <param name="e"></param>
         private void changetoptext(object sender, EventArgs e)
         {
+            lbltoptext.Text = texttoptextbox.Text;
 
         }
         /// <summary>
@@ -58,7 +76,7 @@ namespace MemeMakerApp
         /// <param name="e"></param>
         private void changebottomtext(object sender, EventArgs e)
         {
-
+            
         }
         /// <summary>
         /// Method is resposible to deal what happens when user click on open button
